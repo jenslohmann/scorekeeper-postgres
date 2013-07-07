@@ -9,7 +9,7 @@ create table scorekeeper.tournaments (
 create table scorekeeper.matches (
   id bigint primary key,
   version bigint,
-  time timestamp with time zone,
+  time timestamp with time zone not null,
   tnmt_id bigint not null references scorekeeper.tournaments
 );
 
